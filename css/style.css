@@ -246,7 +246,7 @@ header>h1[data-mt-0]{
 .glass-landing{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(166, 216, 240);
-    background-image: url(/images/bg-jpg.jpg);
+    background-image: url(../images/bg-jpg.jpg);
     background-size: cover;
     height: 35rem;
     width: 100%;
