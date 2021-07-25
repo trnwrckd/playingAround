@@ -1,0 +1,11 @@
+@media only screen and (max-width: 710px){
+    .box-parent{
+        font-size: 5px ;
+    }
+    h1[data-mt-0]{
+        font-size: 2rem;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}

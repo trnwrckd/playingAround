@@ -1,0 +1,301 @@
+/*  */
+/* Custom Scrollbar */
+/*  */
+/* page scrollbar for firefox */
+html{
+    scrollbar-width: thin;
+    scrollbar-color: rgb(3, 3, 58) rgb(170, 164, 164);  
+}
+/* page scrollbar for not-firefox browsers*/
+html::-webkit-scrollbar {
+    width: 8px;            
+}
+html::-webkit-scrollbar-track {
+    background: rgb(170, 164, 164); 
+}
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(3, 3, 58);   
+}
+
+/*  */
+/* common styles */
+/*  */
+body{
+    background-color: rgb(221, 209, 194);
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    text-align: center;
+}
+header{
+    background-image: url(../images/css3-pixelated-background-scroll.webp);
+    background-size: contain;
+    height: 100vh;
+    margin-bottom: 25px;
+}
+h1{
+    font-size:36px;
+}
+li{
+    list-style: none;
+}
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color: white;
+}
+hr{
+    margin: 25px 0;
+    /* maybe add some styles? */
+}
+footer{
+    background: black;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+[data-mt-0]{
+    margin-top: 0;
+}
+header>h1[data-mt-0]{
+    font-size: 64px;
+    color:#C9C25D;
+}
+
+/*  */
+/* animated boxes */
+/*  */
+.box-parent{
+    background: rgb(219, 171, 163);
+    font-size: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+}
+[data-fontSize-24]{
+    font-size: 24px;
+    font-weight: bold;
+}
+[data-fontSize-14]{
+    font-size: 14px;
+    font-weight: bold;
+}
+[data-box]{
+    margin: 2.5em 0;
+    width: 20em;
+    height: 20em;
+    background-color: cadetblue;
+    border-radius: 15px;
+}
+
+/* hover effect from animate.css */
+[data-box]:hover{
+    animation: bounce 1s linear, bounceOutUp 1s 1s linear;
+}
+[data-box="2"]{
+    background-color: chocolate;
+}
+[data-box="2"]:hover{
+    animation: hinge 1.5s;
+}
+[data-box="3"]{
+    background-color:green;
+}
+[data-box="3"]:hover{
+    animation: rotateIn 1s linear, fadeOutRightBig 1s 1s linear;
+}
+.opt-container{
+    padding: 1em;
+    margin-top: 5px;
+    border: 3px solid #566856;
+}
+.opt-container-input-focused{
+    border: 3px solid black;
+}
+.flex>input[type = text]{
+    margin-top: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+.btn{
+    padding: .25rem 1rem;
+    cursor: pointer;
+}
+/*  */
+/* custom classes */
+/*  */
+.flash:hover{
+    animation: flash .5s;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.grid{
+    padding:  0 5%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*  */
+/* custom scrollbar section  */
+/*  */
+.custom-scrollbar{
+    padding: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: 25%;
+    border: 2px solid black;
+    height: 10em;
+    overflow-y: scroll;
+    /* for firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(3, 3, 58) rgb(170, 164, 164);  
+}
+/* custom scrollbar for browsers that are not firefox */
+.custom-scrollbar:hover{
+    background-color: #6e6b6b;
+    color: #efefef;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;            
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgb(170, 164, 164); 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgb(3, 3, 58);   
+}
+
+/*  */
+/* glassmorphism section */
+/*  */
+.gradient-bg{
+    background-image: linear-gradient(-60deg , #b1338b, #e4ba31);
+    margin-top: 25px;
+    height: 35rem;
+    width: 100%;
+}
+.gradient-bg h1 , .glass-landing h1{
+    margin: 0;
+    color: white;
+    padding-bottom: 3vh;
+    font-size: 3rem;
+    letter-spacing: .5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inner-bg{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    /* background-color: teal; */
+}
+.glass{
+    margin: 0 auto;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: white;
+    border-radius: 15px;
+}
+
+/* w/out this the data-tilt causes border malfunction */
+.js-tilt-glare {
+    border-radius: 15px;
+}
+
+[data-overlay]{
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    backdrop-filter: blur(5px);
+}
+[data-overlay="1"]{
+    background:  rgba(255, 208, 233, 0.8);
+}
+[data-overlay="2"]{
+    top: 35%;
+    left: -25%;
+    background:  rgba(180, 240, 230, 0.8);
+}
+[data-overlay="3"]{
+    top: 45%;
+    right: 5%;
+    background:  rgba(177, 187, 240, 0.8);
+}
+.tada:hover{
+    animation: tada 1s linear;
+}
+
+/*  */
+/* Glass Landing Section */
+/*  */
+.glass-landing{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(166, 216, 240);
+    background-image: url(/images/bg-jpg.jpg);
+    background-size: cover;
+    height: 35rem;
+    width: 100%;
+}
+.glass-card{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    color: white;
+    border-radius: 15px;
+    /* padding: 5px; */
+    margin: 15px 5px;
+}
+.glass-card h3{
+    padding: 5px 0;
+    letter-spacing: 2px;
+    color: white;
+    background: rgba(0, 0, 0,0.4);
+    backdrop-filter: blur(3px);
+}
+.glass-card p{
+    color: black;
+    background: rgba(88, 128, 91, 0.2);
+    padding: 5px;
+    backdrop-filter: blur(3px);
+    /* font-size: 14px; */
+}
+[data-center]{
+    justify-content: center;
+    align-items: center;
+}
+input[type = text]:focus{
+    border: 3px solid white;
+    outline: none;
+}
+input[type = text]{
+    width: 50%;
+    padding: .5em;
+    margin-bottom: 5px;
+    font-size: 15px;
+    background: transparent;
+    border: 3px solid black;
+    transition: border .5s;
+}
+.bookSection{
+    width: 80%;
+    border-radius: 15px;
+    height: 50%;
+    background: rgba(196, 235, 240,0.4);
+    background: rgba(238, 167, 214, 0.6);
+    backdrop-filter: blur(3px);
+    color: black;
+}
